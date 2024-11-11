@@ -1,11 +1,13 @@
 package faculdade.com.project.Classes;
 
-public class Saldo {
-    private double saldoAtual;
-    private double salario;
+public class Saldo extends RegistroFinanceiro {
 
-    public Saldo(double saldoAtual, double salario){
-        this.saldoAtual = saldoAtual;
-        this.salario = salario;
-    }    
+    public Saldo(String nome, float valor) {
+        super(nome, valor);
+    }
+
+    public Saldo(float valor) {
+        super(valor);
+    }
+
 }

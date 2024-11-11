@@ -1,32 +1,23 @@
 package faculdade.com.project.Classes;
 
-public class Despesas{
-    protected String nome;
-    protected Float valor;
-    protected String vencimento;
+import faculdade.com.project.Enum.CategoriasDespesa;
 
-    public Despesas(String nome, Float valor, String vencimento){
-        this.nome = nome;
-        this.valor = valor;
+public class Despesas extends RegistroFinanceiro {
+    private String vencimento;
+    private CategoriasDespesa categoria;
+
+    public Despesas(String nome, float valor, String vencimento, CategoriasDespesa categoria) {
+        super(nome, valor);
         this.vencimento = vencimento;
+        this.categoria = categoria;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
+    public Despesas(String nome){
+        super(nome);
         this.nome = nome;
     }
 
-    public Float getValor() {
-        return valor;
-    }
-
-    public void setValor(Float valor) {
-        this.valor = valor;
-    }
-
+    //Get and Set
     public String getVencimento() {
         return vencimento;
     }
@@ -35,5 +26,11 @@ public class Despesas{
         this.vencimento = vencimento;
     }
 
-    
+    public CategoriasDespesa getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(CategoriasDespesa categoria) {
+        this.categoria = categoria;
+    }
 }
